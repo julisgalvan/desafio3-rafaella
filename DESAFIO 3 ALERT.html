@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Jogo de Aprendizado de Programação</title>
+    </head>
+        <body>
+            <h1>Bem-vindo ao Jogo de Aprendizado de Programação</h1>
+
+            <p>Escolha uma das opções abaixo para começar:</p>
+           <button onclick="comecarJogo()">Começar</button>
+
+        <script>
+            function comecarJogo() {
+              // apresentando as opções iniciais para o usuário
+        let escolha1 = prompt("Bem-vindo ao jogo de aprendizado de programação! Escolha uma das opções abaixo para começar:\n1. Seguir para área de Front-End\n2. Seguir para a área de Back-End\nDigite o número correspondente à sua escolha:");
+
+        // verificando a escolha do usuário e apresentando a próxima pergunta
+        if (escolha1 === "1") {
+          let escolha2 = prompt("Ótimo, agora escolha a tecnologia que deseja aprender:\n1. React\n2. Vue\nDigite o número correspondente à sua escolha:");
+          if (escolha2 === "1") {
+            alert("Parabéns, agora você é um desenvolvedor de React!");
+          } else if (escolha2 === "2") {
+            alert("Parabéns, agora você é um desenvolvedor de Vue!");
+          }
+        } else if (escolha1 === "2") {
+          let escolha2 = prompt("Ótimo, agora escolha a tecnologia que deseja aprender:\n1. C#\n2. Java\nDigite o número correspondente à sua escolha:");
+          if (escolha2 === "1") {
+            alert("Parabéns, agora você é um desenvolvedor de C#!");
+          } else if (escolha2 === "2") {
+            alert("Parabéns, agora você é um desenvolvedor de Java!");
+          }
+        }
+
+        // apresentando as opções adicionais para o usuário
+        let escolha3 = prompt("Agora, você gostaria de se especializar na área escolhida ou se tornar um Fullstack Developer?\n1. Especializar-se na área escolhida\n2. Tornar-se um Fullstack Developer\nDigite o número correspondente à sua escolha:");
+        if (escolha3 === "1") {
+          alert("Parabéns, você agora é um especialista em sua área escolhida!");
+        } else if (escolha3 === "2") {
+          alert("Parabéns, agora você é um Fullstack Developer!");
+        }
+
+        // permitindo que o usuário adicione mais tecnologias à lista de aprendizado
+        let tecnologias = [];
+        let adicionarTecnologia = true;
+        while (adicionarTecnologia) {
+          let tecnologia = prompt("Digite o nome da tecnologia que deseja aprender:");
+          tecnologias.push(tecnologia);
+          let resposta = prompt("Incrível! " + tecnologia + " é uma ótima escolha. Tem mais alguma tecnologia que você gostaria de aprender?\nDigite 'ok' para continuar adicionando tecnologias ou 'sair' para encerrar a lista:");
+          if (resposta !== "ok") {
+            adicionarTecnologia = false;
+          }
+        }
+
+        // apresentando a lista de tecnologias escolhidas pelo usuário
+        alert("Muito bem, agora você é um programador experiente em " + escolha2 + " e está aprendendo " + tecnologias.join(", ") + ". Continue se desenvolvendo para se tornar um programador ainda melhor!");
+
+        }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
